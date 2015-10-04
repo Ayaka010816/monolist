@@ -159,6 +159,9 @@
       .gravatar {
         img {
           margin: 2px;
+          .icon {
+          float: left;
+          }
         }
       }
     }
