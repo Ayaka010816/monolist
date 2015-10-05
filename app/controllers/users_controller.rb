@@ -14,10 +14,11 @@ class UsersController < ApplicationController
     end
   end
   
+  
   def show
-    @items = @user.items.group(:item_id)
+    @items = @user.items.group('items.id')
   end
-
+  
   private
   def set_user
     @user = User.find(params[:id])
