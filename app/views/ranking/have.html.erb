@@ -1,0 +1,30 @@
+<% i = 1 %>
+<% content_for :head do %>
+<% end %>
+<div class="ranking">
+  <h2>★持っているアイテム　TOP 10★</h2>
+ </div>
+ <% @items.each do |item| %>
+ <div class="item-box">
+  <div class="number" %>
+   <h3>No.<%= i %></h3>
+  </div>
+   <div class="image">
+    <div class="img-wrap">
+     <% if item.large_image.present? %>
+      <%= image_tag(item.large_image , alt: item.title) %>
+     <% else %>
+      <%= image_tag("no-image.png" , alt: item.title) %>
+     <% end %>
+    </div>
+   </div>
+  <div class="detail">
+   <p class="title">
+   <%= item.title %>
+   </p>
+  </div>
+  </div>
+<% i = i + 1 %>
+<% end %>
+</div>
+</div>
