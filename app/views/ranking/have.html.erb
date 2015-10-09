@@ -1,7 +1,12 @@
 <% i = 1 %>
 <% content_for :head do %>
+<title>
+    Haveのランキング 
+</title>
 <% end %>
+<div class="container">
 <div class="ranking">
+ <div class="title"> 
   <h2>★持っているアイテム　TOP 10★</h2>
  </div>
  <% @items.each do |item| %>
